@@ -14,7 +14,7 @@ jobs:
         run: |
           bpkg --version
 
-  v1.0.0:
+  v1-0-0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
         run: |
           bpkg --version | grep '1.0.0'
 
-  v1.1.0:
+  v1-1-0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
