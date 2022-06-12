@@ -11,8 +11,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
       - name: Verify latest
-      - run: |
-        bpkg --version
+        run: |
+          bpkg --version
 
   v1.0.0:
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
       - uses: ./
       - name: Verify latest
         run: |
-        bpkg --version | grep '1.0.0'
+          bpkg --version | grep '1.0.0'
 
   v1.1.0:
     runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
       - uses: ./
       - name: Verify latest
         run: |
-        bpkg --version | grep '1.1.0'
+          bpkg --version | grep '1.1.0'
