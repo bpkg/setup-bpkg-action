@@ -12,5 +12,5 @@ runs:
   steps:
     - shell: bash
       run: |
-        echo Will fetch bpkg@${{ inputs.bpkg-version }}
+        echo Will fetch and install bpkg@${{ inputs.bpkg-version }}
         curl -sLo- get.bpkg.sh/${{ inputs.bpkg-version }} | bash
