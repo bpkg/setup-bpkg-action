@@ -5,6 +5,7 @@ author: 'Joseph Werle <joseph.werle@gmail.com>'
 inputs:
   bpkg-version:
     description: 'Version (tag) to use for bpkg'
+    default: 'latest'
 
 runs:
   using: 'composite'
