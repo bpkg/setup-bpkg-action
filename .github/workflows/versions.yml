@@ -1,0 +1,33 @@
+name: versions
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+      - name: Verify latest
+      - run: |
+        bpkg --version
+
+  v1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+      - name: Verify latest
+      - run: |
+        bpkg --version | grep '1.0.0'
+
+  v1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+      - name: Verify latest
+      - run: |
+        bpkg --version | grep '1.1.0'
