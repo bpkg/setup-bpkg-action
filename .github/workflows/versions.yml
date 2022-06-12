@@ -23,6 +23,7 @@ jobs:
           bpkg-version: 1.0.0
       - name: Verify bpkg@1.0.0
         run: |
+          bpkg --version
           bpkg --version | grep '1.0.0'
 
   v1-1-0:
@@ -34,6 +35,7 @@ jobs:
           bpkg-version: 1.1.0
       - name: Verify bpkg@1.1.0
         run: |
+          bpkg --version
           bpkg --version | grep '1.1.0'
 
   v1-1-1:
@@ -45,6 +47,7 @@ jobs:
           bpkg-version: 1.1.1
       - name: Verify bpkg@1.1.1
         run: |
+          bpkg --version
           bpkg --version | grep '1.1.1'
 
   v1-1-2:
@@ -56,4 +59,5 @@ jobs:
           bpkg-version: 1.1.2
       - name: Verify bpkg@1.1.2
         run: |
+          bpkg --version
           bpkg --version | grep '1.1.2'
