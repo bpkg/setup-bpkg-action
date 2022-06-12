@@ -19,7 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-      - name: Verify latest
+        with:
+          bpkg-version: 1.0.0
+      - name: Verify v1.0.0
         run: |
           bpkg --version | grep '1.0.0'
 
@@ -28,6 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-      - name: Verify latest
+      - name: Verify v1.1.0
+        with:
+          bpkg-version: 1.1.0
         run: |
           bpkg --version | grep '1.1.0'
