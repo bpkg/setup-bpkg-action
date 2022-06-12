@@ -1,0 +1,14 @@
+name: 'Setup bpkg environment'
+description: 'Setup bpkg in environment making available in PATH'
+author: 'Joseph Werle <joseph.werle@gmail.com>'
+
+inputs:
+  bpkg-version:
+    description: 'Version (tag) to use for bpkg'
+
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        curl -sLo- get.bpkg.sh/${{ inputs.bpkg-version }} | bash
