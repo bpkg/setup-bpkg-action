@@ -21,7 +21,7 @@ jobs:
       - uses: ./
         with:
           bpkg-version: 1.0.0
-      - name: Verify v1.0.0
+      - name: Verify bpkg@1.0.0
         run: |
           bpkg --version | grep '1.0.0'
 
@@ -30,8 +30,30 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-      - name: Verify v1.1.0
         with:
           bpkg-version: 1.1.0
+      - name: Verify bpkg@1.1.0
         run: |
           bpkg --version | grep '1.1.0'
+
+  v1-1-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          bpkg-version: 1.1.1
+      - name: Verify bpkg@1.1.1
+        run: |
+          bpkg --version | grep '1.1.1'
+
+  v1-1-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          bpkg-version: 1.1.2
+      - name: Verify bpkg@1.1.2
+        run: |
+          bpkg --version | grep '1.1.2'
